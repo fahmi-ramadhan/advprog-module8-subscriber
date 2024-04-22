@@ -13,3 +13,9 @@ AMQP adalah singkatan dari "Advanced Message Queuing Protocol", sebuah protokol 
 - `guest` pertama adalah nama pengguna untuk otentikasi.
 - `guest` kedua adalah kata sandi untuk otentikasi.
 - `localhost:5672` adalah alamat host dan nomor port tempat RabbitMQ berjalan. `localhost` berarti di mesin yang sama dengan klien, dan `5672` adalah port default untuk protokol AMQP.
+
+### Simulation Slow Subscriber
+
+![Simulation Slow Subscriber](https://i.imgur.com/MimMdbW.png)
+
+Perhatikan bahwa terdapat 15 pesan pada _queue_, ini terjadi karena terdapat _buffer_ 1 detik untuk menunggu setiap proses pengiriman pesan dan saya mengeksekusi `cargo run` pada _publisher_ sebanyak 4 kali secara cepat.
